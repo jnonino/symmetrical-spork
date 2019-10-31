@@ -5,4 +5,4 @@ region="us-east-1"
 container_image="jnonino/symmetrical-spork:latest"
 container_port=8080
 
-log_group_path="/ecs/service/${var.name_preffix}"
+log_group_path="/ecs/service/spork"
