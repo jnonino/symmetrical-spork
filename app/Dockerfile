@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --production
+RUN apk add curl && \
+    npm install --production 
 
 COPY . .
 
