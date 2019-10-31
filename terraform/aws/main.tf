@@ -13,7 +13,7 @@ locals {
     secretOptions = null
   }
   healthcheck = {
-    command     = [ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]
+    command     = [ "CMD-SHELL", "curl -f http://localhost:8080/__healthcheck__ || exit 1" ]
     retries     = 3
     timeout     = 5
     interval    = 30
