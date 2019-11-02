@@ -37,11 +37,26 @@ The task objectives were as follows:
 
 ## Deploy
 
-TODO: Document how to run
+The infrastructure of this project was created using terraform. In order to deploy it the following commands are available:
+
+        make plan
+        make deploy
+
+With the first one, terraform plan command is executed, which is used to create an execution plan (https://www.terraform.io/docs/commands/plan.html).
+
+With the second one, terraform apply command is executed, which is used to apply the changes required to reach the desired state of the configuration (https://www.terraform.io/docs/commands/apply.html).
 
 ## Test the whole setup
 
-TODO: Document how to test the setup
+### Terraform Compliance
+    
+Requirements
+
+        pip install terraform-compliance
+
+Run tests
+
+        make terraform-compliance
 
 ## Note
 
