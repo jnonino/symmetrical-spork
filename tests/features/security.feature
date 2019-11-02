@@ -7,6 +7,11 @@ Feature: Only required ports are accessible
         When it contains ingress
         Then it must not have tcp protocol and port 1024-65535 for 0.0.0.0/0
 
+    Scenario: No SSH port open
+        Given I have AWS Security Group defined
+        When it contains ingress
+        Then it must not have tcp protocol and port 22 for 0.0.0.0/0
+
     Scenario: Only selected ports should be publicly open
         Given I have AWS Security Group defined
         When it contains ingress
