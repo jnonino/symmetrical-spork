@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Init
+      run: terraform init
+    - name: Validation
+      run: terraform validate
+    - name: Terraform Compliance Tests
+      run: make terraform-compliance
