@@ -39,8 +39,8 @@ The task objectives were as follows:
 
 The infrastructure of this project was created using terraform. In order to deploy it the following commands are available:
 
-        make plan
-        make deploy
+        $ make plan
+        $ make deploy
 
 With the first one, terraform plan command is executed, which is used to create an execution plan (https://www.terraform.io/docs/commands/plan.html).
 
@@ -50,13 +50,13 @@ With the second one, terraform apply command is executed, which is used to apply
 
 ### Terraform Compliance
     
-Requirements
+Python should be installed. Then install Terraform Compliance.
 
-        pip install terraform-compliance
+        $ pip install terraform-compliance
 
 Run tests
 
-        make terraform-compliance
+        $ make test-tf-compliance
 
 ## Note
 

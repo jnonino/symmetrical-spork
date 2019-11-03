@@ -16,16 +16,16 @@ init: ## Init Terraform folder
 		terraform get
 
 plan: init ## Plan Infrastructure
-		echo "Plan infrastructure" && \
+		@echo "Plan infrastructure" && \
 		cd $(TERRAFORM_AWS_DIR) && \
 		terraform plan -out=plan.out
 
 deploy: init ## Deploy Infrastructure
-		echo "Deploy infrastructure" && \
+		@echo "Deploy infrastructure" && \
 		cd $(TERRAFORM_AWS_DIR) && \
 		terraform apply
 
-terraform-compliance: plan ## Test infrastructure
+test-tf-compliance: plan ## Test infrastructure with Terraform Compliance
 		@scripts/terraform_compliance_tests.sh
 
 cleanup: init ## Cleanup Infrastructure
